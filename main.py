@@ -32,8 +32,8 @@ if __name__ == "__main__":
     # print(type(today))
     writeInd = []
     for index, item in df.iterrows():
-        #print(index, item['Birthday'])
-        bday = item['Birthday'].strftime("%d-%m")
+        #print(index, item['D.O.B'])
+        bday = item['D.O.B'].strftime("%d-%m")
         # print(bday) 
         if(today == bday) and yearNow not in str(item['Year']):
             sendEmail(item['Email'], "Happy Birthday", item['Dialogue']) 
